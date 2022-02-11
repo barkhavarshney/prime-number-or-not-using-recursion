@@ -1,0 +1,33 @@
+#include <stdio.h>
+int prime(int,int);
+void main()
+{
+    int num,p;
+    printf("enter num");
+    scanf("%d",&num);
+    p=prime(num,num/2);
+    if(p==1)
+    {
+        printf("%d is prime",num);
+    }
+    else
+    {
+        printf("%d is not prime",num);
+    }
+}
+int prime(int num,int i)
+{
+    if(i==1)
+    {
+        return 1;
+    }
+    else
+    {
+        if(num%i==0)
+            return 0;
+        else
+            prime(num,i-1);
+    }
+}
+          
+        
